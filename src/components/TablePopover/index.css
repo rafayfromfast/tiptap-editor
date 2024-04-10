@@ -1,0 +1,18 @@
+.menu {
+  width: 300px;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.sub-menu {
+  padding-left: 20px;
+}
+.expand-icon {
+  margin-left: auto;
+  min-width: 0px !important;
+  transition: all 0.5s;
+}
+.expanded {
+  transform: rotateX(180deg);
+}

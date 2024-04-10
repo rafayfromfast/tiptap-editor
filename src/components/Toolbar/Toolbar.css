@@ -1,0 +1,37 @@
+.menu-container {
+  width: calc(100% - 50px);
+  padding-left: 50px;
+  border-bottom: 1px solid rgb(235, 234, 234);
+  display: flex;
+  gap: 2px;
+  height: 40px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+}
+.inner-container {
+  width: 72%;
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-btn {
+  background: none;
+  border: none;
+  outline: none;
+  transition: all 0.5s;
+  border-radius: 4px;
+  padding-top: 4px;
+}
+.toolbar-btn:hover {
+  cursor: pointer;
+  background-color: lightgray;
+  transform: scale(1.1);
+}
+
+.is-active {
+  background-color: lightgray;
+  transform: scale(1.1);
+}

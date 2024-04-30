@@ -64,7 +64,7 @@ export default function TablePopover({ editor }) {
   const id = open ? 'simple-popover' : undefined;
 
   useEffect(() => {
-    !mandatoryField && btnRef.current?.click();
+    // !mandatoryField && btnRef.current?.click();
   }, []);
   return (
     <span className='container'>

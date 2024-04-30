@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import { InputLabel, Switch, TextField } from '@mui/material';
 import './index.css';
 
-export default function LinkPopover({ editor }) {
+export default function LinkPopover({ editor, editorSection }) {
   const [selection, setSelection] = useState('');
   const [follow, setFollow] = useState(false);
   const [link, setLink] = useState(null);
@@ -64,6 +64,7 @@ export default function LinkPopover({ editor }) {
       <button
         onClick={handleClick}
         className={`${editor.isActive('link') ? 'is-active' : ''} toolbar-btn`}
+        disabled={editorSection === 'title'}
       >
         <svg
           xmlns='http://www.w3.org/2000/svg'

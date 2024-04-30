@@ -58,7 +58,7 @@ const options = [
   },
 ];
 
-const TypographySelect = ({ editor }) => {
+const TypographySelect = ({ editor, editorSection }) => {
   const handleChange = (e) => {
     const heading = options.find((el) => el.val === e.target.value);
     heading.action(editor);
@@ -87,7 +87,10 @@ const TypographySelect = ({ editor }) => {
         height: '30px',
       }}
     >
-      {options.map((el) => (
+      {(editorSection === 'title'
+        ? [options[1]]
+        : [options[0], ...options.slice(2, options.length)]
+      ).map((el) => (
         <MenuItem value={el.val}>
           {el.icon && <ListItemIcon>{el.icon}</ListItemIcon>}
           {el.label}

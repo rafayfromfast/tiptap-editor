@@ -61,7 +61,7 @@ const actions = [
   },
 ];
 
-export default function TablePopover({ editor }) {
+export default function TablePopover({ editor, editorSection }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const [secondaryAnchor, setSecondaryAnchor] = useState(null);
 
@@ -118,6 +118,7 @@ export default function TablePopover({ editor }) {
         aria-describedby={id}
         onClick={handleClick}
         className={`${editor.isActive('table') ? 'is-active' : ''} toolbar-btn`}
+        disabled={editorSection === 'title'}
       >
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -134,7 +135,7 @@ export default function TablePopover({ editor }) {
       <Popper
         id='simple-menu'
         anchorEl={anchorEl}
-        placement='right-end'
+        placement='right'
         open={open}
         className='menu'
       >

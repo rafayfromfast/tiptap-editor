@@ -1,3 +1,4 @@
+import { EditorProvider } from '@tiptap/react';
 import Tiptap from './components/Tiptap';
 // import './App.css';
 
